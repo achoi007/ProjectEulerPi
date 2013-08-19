@@ -9,6 +9,8 @@
     "express": "3.3.5",
     "jade": "*",
     "stylus": "*",
-    "express-namespace": "*"
+    "express-namespace": "*",
+    "coffee-script": "*",
+    "typescript": "*"
   }
 }
