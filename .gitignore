@@ -1,2 +1,3 @@
-/node_modules
-/iisnode
+node_modules/
+iisnode/
+
