@@ -39,7 +39,7 @@ answer = (problem_num, name) ->
         a =
             num: problem_num
             msg: eval("#{name}_answer")
-            val: eval("#{name}_solver")(req.body.n)
+            val: eval("#{name}_solver")(+req.body.n)    # str to num
         res.render 'answer', a
  
 ###
@@ -48,8 +48,7 @@ Problem 0
 
 problem0_question = "What is the meaning of life?"
 problem0_answer = "The meaning of life is "
-problem0_solver = (arg) -> 
-    n = +arg
+problem0_solver = (n) -> 
     s = "indeed" if n == 42
     s = "not" if n != 42
     s + " #{n}"
@@ -61,8 +60,7 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 
 problem1_question = "Sum of all multiples of 3 or 5 below"
 problem1_answer = "The sum is"
-problem1_solver = (arg) ->
-    n = +arg
+problem1_solver = (n) ->
     nums = (i for i in [1...n] when (i % 3 == 0 or i % 5 == 0))
     sum = 0
     nums.forEach (i) -> sum += i
