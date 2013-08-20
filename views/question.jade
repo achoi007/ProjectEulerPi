@@ -2,8 +2,9 @@ extends layout
 
 block content
   h1 Question #{num}
-  iframe(width=700, height=700, src="http://projecteuler.net/problem=" + num)
   form(action="/euler/problem" + num, method="post")
     label(for="num") #{msg}
     input(type="number", name="n")
     button(type="submit") Submit
+  iframe(width=700, height=700, src="http://projecteuler.net/problem=" + num)
+
