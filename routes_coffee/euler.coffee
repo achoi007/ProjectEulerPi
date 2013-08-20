@@ -17,7 +17,7 @@ The list of problem numbers.  Each problem must have:
  * problemN_solver() - solver to return an answer
 See problem0 below for an example.
 ### 
-problems = [0]
+problems = [1]
 
 index = (req, res) ->
     msg =
@@ -53,3 +53,19 @@ problem0_solver = (arg) ->
     s = "indeed" if n == 42
     s = "not" if n != 42
     s + " #{n}"
+
+###
+Problem 1
+Find the sum of all the multiples of 3 or 5 below 1000.
+###
+
+problem1_question = "Sum of all multiples of 3 or 5 below"
+problem1_answer = "The sum is"
+problem1_solver = (arg) ->
+    n = +arg
+    nums = (i for i in [1...n] when (i % 3 == 0 or i % 5 == 0))
+    sum = 0
+    nums.forEach (i) -> sum += i
+    sum
+
+
