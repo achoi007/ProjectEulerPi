@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1 Question #{num}
+  iframe(width=700, height=700, src="http://projecteuler.net/problem=" + num)
+  p 
+    | #{msg} #{val} 
+    a(href="/euler/problem" + num) Back to problem

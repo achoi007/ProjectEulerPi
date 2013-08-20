@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+  p Solutions for the following problems:
+  ul
+    each problem in problems
+      li 
+        a(href="euler/problem" + problem) Problem #{problem}
