@@ -11,6 +11,7 @@
     "stylus": "*",
     "express-namespace": "*",
     "coffee-script": "*",
-    "typescript": "*"
+    "typescript": "*",
+    "underscore": "*"
   }
 }
